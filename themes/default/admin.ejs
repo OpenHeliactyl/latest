@@ -11,9 +11,9 @@
         <%- include('./components/topnav') %>
         <!-- partial -->
         <div class="main-panel">
-          <div style="background-color: #111319" class="content-wrapper">
+          <div style="background: linear-gradient(to right, blue, indigo);" class="content-wrapper">
            <h2>Admin</h2>
-           <p class="text-gray">Use Heliactyl's admin settings.</p>
+           <p class="text-gray">Use In cloud's admin settings.</p>
             <% if (req.query.err) { %>
               <% if (req.query.err !== "none") { %>
                 <div style="border-radius: 15px;" class="alert">
@@ -52,7 +52,7 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Heliactyl Version</h4>
+                    <h4 class="card-title">In cloud Version</h4>
                     <form class="forms-sample">
                       <div class="form-group">
                       <p id="latestversion"><span>Fetching...</span></p>
@@ -67,11 +67,11 @@
                                             .then(res => Promise.resolve(res.json()).then(ver => {
                                                 let currentver = "<%= settings.version.replace(/"/g, `\\\\"`) %>";
                                                 if (ver.version == currentver) {
-                                                    document.getElementById("latestversion").innerHTML = `<span>You are running Heliactyl version <code style="color: #007fcc" >v${currentver}</code>. Heliactyl is up-to-date!</span>`;
+                                                    document.getElementById("latestversion").innerHTML = `<span>You are running In cloud version <code style="color: #007fcc" >v${currentver}</code>. In cloud is up-to-date!</span>`;
                                                 } else if (ver.prerelease == currentver) {
-                                                    document.getElementById("latestversion").innerHTML = `<span>You are running Heliactyl version <code style="color: #007fcc">v${currentver}</code>. Heliactyl is up-to-date!</span>`;
+                                                    document.getElementById("latestversion").innerHTML = `<span>You are running In cloud version <code style="color: #007fcc">v${currentver}</code>. In cloud is up-to-date!</span>`;
                                                 } else {
-                                                    document.getElementById("latestversion").innerHTML = `<span>Heliactyl is <b>not up-to-date!</b> The latest version is <code style="color: #007fcc" >v${ver.version}</code> and you are currently running version <code style="color: #007fcc" >v<%= settings.version %></code>.</span>`;
+                                                    document.getElementById("latestversion").innerHTML = `<span>In cloud is <b>not up-to-date!</b> The latest version is <code style="color: #007fcc" >v${ver.version}</code> and you are currently running version <code style="color: #007fcc" >v<%= settings.version %></code>.</span>`;
                                                 };
                                             }));
                                     </script>
@@ -79,10 +79,10 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Heliactyl Information</h4>
+                    <h4 class="card-title">In cloud Information</h4>
                     <form class="forms-sample">
                       <div class="form-group">
-                      <a href="https://github.com/OpenHeliactyl/Heliactyl/" class="btn btn-primary btn-lg">View latest version</a> <a href="https://discord.gg/XBybDyF6jx" class="btn btn-primary btn-lg">Get support</a>
+                      <a href="https://github.com/OpenIn cloud/In cloud/" class="btn btn-primary btn-lg">View latest version</a> <a href="https://discord.gg/XBybDyF6jx" class="btn btn-primary btn-lg">Get support</a>
                     </form>
                   </div>
                 </div>
