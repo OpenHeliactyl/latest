@@ -5,28 +5,79 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-
-  <body style="background-color: #111319">
-    <div style="background-color: #111319" class="container-scroller">
-      <div style="background-color: #111319" class="container-fluid page-body-wrapper full-page-wrapper">
-        <div style="background-color: #111319" class="row w-100 m-0">
-          <div style="background-color: #111319" class="content-wrapper full-page-wrapper d-flex align-items-center">
-            <div class="card col-lg-4 mx-auto">
-              <div class="card-body px-5 py-5">
+<style>
+@keyframes wave {
+  0% { background-position: 0% 0, 100% 0; }
+  100% { background-position: -100% 0, 100% 0; }
+}
+</style>  
+  <body style="background-color: #0d48fa">
+    <div style="background-color: #103ec7" class="container-scroller">
+      <div style="background-color: #1344d9" class="container-fluid page-body-wrapper full-page-wrapper">
+        <div style="background: linear-gradient(to right, blue, indigo);" class="row w-100 m-0">
+          
+          <div style="background: linear-gradient(to right, blue, indigo); animation: wave 5s linear infinite;" class="content-wrapper full-page-wrapper d-flex align-items-center">
+            <div style="background: linear-gradient(to right, blue, indigo); border: 2px solid black; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" class="card col-lg-4 mx-auto">
+            <div style="background: linear-gradient(to right, blue, indigo);" class="card-body px-3 py-3">
                 <form>
-                  <div class="text-center">
+                  <div style="background: linear-gradient(to right, blue, indigo);" class="text-center">
                     <br>
                     <center>
-                      <p style="font-family: 'Roboto Mono', monospace;">Authentication</p>
-                      <h3><bold>Welcome!</bold></h3>
+                      <div style="background: linear-gradient(to right, blue, indigo);" class="content-wrapper full-page-wrapper d-flex align-items-center">
+                        <div style="padding: 20px; background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
+                          <p style="font-family: 'Roboto Mono', monospace; text-align: center; font-size: 50px; background: linear-gradient(to right, white, lightgrey); color: black;">In Cloud</p>
+                          <h3 style="background: linear-gradient(to right, lightgrey, white); color: black;"><bold>Welcome to in-cloud! Your ultimate resource for free hosting solutions.</bold></h3>
+                        </div>
+                      </div>
                     </center>
-                    <br><br>
                     <% if (!req.session.userinfo)  { %>
-                    <a role="button" class="button" href="<%= extra.home.buttontext.loggedout.link %>" onclick="this.classList.toggle('button--loading')"><span class="button__text">Login</span></a>
-                    <% } else { %>
+                      <style>
+                          .button {
+                              display: inline-block;
+                              padding: 10px 20px;
+                              background-color: #007bff;
+                              color: white;
+                              text-decoration: none;
+                              border-radius: 5px;
+                              font-weight: bold;
+                              transition: background-color 0.3s ease;
+                          }
+                  
+                          .button:hover {
+                              background-color: #0056b3;
+                          }
+                  
+                          .button--loading {
+                              cursor: not-allowed;
+                              opacity: 0.6;
+                          }
+                      </style>
+                      <a role="button" class="button" href="<%= extra.home.buttontext.loggedout.link %>" onclick="this.classList.toggle('button--loading')"><span class="button__text">Login</span></a>
+                  <% } else { %>
+                      <style>
+                          .button {
+                              display: inline-block;
+                              padding: 10px 20px;
+                              background-color: #007bff;
+                              color: white;
+                              text-decoration: none;
+                              border-radius: 5px;
+                              font-weight: bold;
+                              transition: background-color 0.3s ease;
+                          }
+                  
+                          .button:hover {
+                              background-color: #0056b3;
+                          }
+                  
+                          .button--loading {
+                              cursor: not-allowed;
+                              opacity: 0.6;
+                          }
+                      </style>
                       <a role="button" class="button" href="<%= extra.home.buttontext.loggedin.link %>">Login as <%= req.session.userinfo.username %>#<%= req.session.userinfo.discriminator %></a><br />
                       <a role="button" style="font-size: 18px; margin-top: 6px;" class="btn btn-primary btn-lg" href="<%= extra.home.buttontext.loggedout.link %>">Login on a different account</a>
-                    <% } %>
+                  <% } %>                                    
                     <br>
                   </div>
                 </form>
@@ -47,8 +98,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Login to access the dashboard.">
-  <meta name="keywords" content="hosting, free hosting, mc, mc hosting, minecraft, witchly, witchlyhost, witchly.host">
+  <meta name="description" content="Welcome to in-cloud! Your ultimate resource for free hosting solutions.">
   <meta name="author" content="Dashboard">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
