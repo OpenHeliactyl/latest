@@ -40,7 +40,7 @@
         "code": "Default API Key (Change this to any string you want)"
       },
       "j4r": {
-        "enabled": true,
+        "enabled": false,
         "ads": [
           {
             "name": "Example server 1",
@@ -142,7 +142,7 @@
       },
       "eggs": {
        "paper": {
-          "display": "Minecraft Java | Paper/Spigot",
+          "display": "Free VPS",
           "minimum": {
             "ram": 1024,
             "disk": 1024,
@@ -155,38 +155,8 @@
           },
           "info": {
             "egg": 3,
-            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
-            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
-            "environment": {
-              "SERVER_JARFILE": "server.jar",
-              "BUILD_NUMBER": "latest"
-            },
-            "feature_limits": {
-              "databases": 4,
-              "backups": 4
-            }
-          }
-        },
-        "bungeecord": {
-          "display": "Minecraft Java | BungeeCord",
-          "minimum": {
-            "ram": 512,
-            "disk": 512,
-            "cpu": 75
-          },
-          "maximum": {
-            "ram": null,
-            "disk": null,
-            "cpu": null
-          },
-          "info": {
-            "egg": 1,
-            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
-            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
-            "environment": {
-              "SERVER_JARFILE": "bungeecord.jar",
-              "BUNGEE_VERSION": "latest"
-            },
+            "docker_image": "quay.io/ydrag0n/pterodactyl-vps-egg",
+            "startup": "chmod +x run.sh && ./run.sh",
             "feature_limits": {
               "databases": 4,
               "backups": 4
