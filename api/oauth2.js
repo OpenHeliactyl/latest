@@ -44,7 +44,7 @@ module.exports.load = async function (app, db) {
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
     <title>Please wait...</title>
     </head>
-    <body style="background-color: #111319; font-family: 'IBM Plex Sans', sans-serif;">
+    <body style="background: linear-gradient(to right, blue, indigo); font-family: 'IBM Plex Sans', sans-serif;">
     <center>
       <br><br><br>
       <h1 style="color: white">Logging in...</h1>
