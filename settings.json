@@ -13,8 +13,8 @@
     "secret": "Default Secret (Change this to any string you want)"
   },
   "pterodactyl": {
-    "domain": "https://panel.example.com",
-    "key": "ptla_0000000000000000000000000000000000000000000"
+    "domain": "https://ptero.oblivioz.me",
+    "key": "ptla_x5ZflsDaWoM4xiLQgjekysYKuPlSlnJzt5YK10uBXDq"
   },
   "linkvertise": {
     "userid": "50000",
@@ -89,9 +89,9 @@
       },
       "oauth2": {
         "_comment": "Go to https://discord.dev/ and create an application to set these up.",
-        "id": "0000000000000000000",
-        "secret": "0000000000000000000000000000",
-        "link": "https://client.example.com",
+        "id": "1266620077026050109",
+        "secret": "ON7_iBdIUEgp0cDZF8XAidGiiyv-mLra",
+        "link": "https://playstation453-incloud-dash-frmf-code-redirect-3.apps.sandbox-m4.g2pi.p1.openshiftapps.com",
         "callbackpath": "/callback",
         "prompt": true,
         "ip": {
