@@ -1,7 +1,7 @@
 {
   "version": "12.7.1",
-  "name": "Heliactyl",
-  "letter": "H",
+  "name": "In-Cloud",
+  "letter": "I-C",
   "defaulttheme": "default",
   "timezone": "Europe/London",
   "resources": {
@@ -13,8 +13,8 @@
     "secret": "Default Secret (Change this to any string you want)"
   },
   "pterodactyl": {
-    "domain": "https://panel.example.com",
-    "key": "ptla_0000000000000000000000000000000000000000000"
+    "domain": "https://ptero.oblivioz.me",
+    "key": "stop stalking me"
   },
   "linkvertise": {
     "userid": "50000",
@@ -40,7 +40,7 @@
         "code": "Default API Key (Change this to any string you want)"
       },
       "j4r": {
-        "enabled": true,
+        "enabled": false,
         "ads": [
           {
             "name": "Example server 1",
@@ -89,9 +89,9 @@
       },
       "oauth2": {
         "_comment": "Go to https://discord.dev/ and create an application to set these up.",
-        "id": "0000000000000000000",
-        "secret": "0000000000000000000000000000",
-        "link": "https://client.example.com",
+        "id": "1266620077026050109",
+        "secret": "ON7_iBdIUEgp0cDZF8XAidGiiyv-mLra",
+        "link": "https://playstation453-incloud-dash-frmf-code-redirect-3.apps.sandbox-m4.g2pi.p1.openshiftapps.com",
         "callbackpath": "/callback",
         "prompt": true,
         "ip": {
@@ -142,7 +142,7 @@
       },
       "eggs": {
        "paper": {
-          "display": "Minecraft Java | Paper/Spigot",
+          "display": "Free VPS",
           "minimum": {
             "ram": 1024,
             "disk": 1024,
@@ -155,38 +155,8 @@
           },
           "info": {
             "egg": 3,
-            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
-            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
-            "environment": {
-              "SERVER_JARFILE": "server.jar",
-              "BUILD_NUMBER": "latest"
-            },
-            "feature_limits": {
-              "databases": 4,
-              "backups": 4
-            }
-          }
-        },
-        "bungeecord": {
-          "display": "Minecraft Java | BungeeCord",
-          "minimum": {
-            "ram": 512,
-            "disk": 512,
-            "cpu": 75
-          },
-          "maximum": {
-            "ram": null,
-            "disk": null,
-            "cpu": null
-          },
-          "info": {
-            "egg": 1,
-            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
-            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
-            "environment": {
-              "SERVER_JARFILE": "bungeecord.jar",
-              "BUNGEE_VERSION": "latest"
-            },
+            "docker_image": "quay.io/ydrag0n/pterodactyl-vps-egg",
+            "startup": "chmod +x run.sh && ./run.sh",
             "feature_limits": {
               "databases": 4,
               "backups": 4
